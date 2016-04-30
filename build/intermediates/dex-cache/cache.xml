@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="D:\Dhruval\Android\JobReferDemo\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.1_ba4780e027d3cf91d141ef96e63291aea693de1b.jar" />
+    </item>
+    <item
+        jar="D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="D:\Dhruval\Android\JobReferDemo\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_2c94f13e87502e6e219bfe923cc8acea2d8171a5.jar" />
+    </item>
+    <item
+        jar="D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="D:\Dhruval\Android\JobReferDemo\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_a5f694445ed7375fb786c3facc0e0d0b38bdc52a.jar" />
+    </item>
+    <item
+        jar="D:\Dhruval\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="D:\Dhruval\Android\JobReferDemo\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_1d4d4970f7a894ea2d7bd4721a2687d46e621e21.jar" />
+    </item>
+    <item
+        jar="D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\library-aar\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e40b9a81989bd4a846018551c280f8c4d837bf2e">
+        <dex dex="D:\Dhruval\Android\JobReferDemo\app\build\intermediates\pre-dexed\debug\com.mcxiaoke.volley-library-aar-1.0.0_965bb414ba3385ef1e14312be9f50d38b0e921f4.jar" />
+    </item>
+    <item
+        jar="D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="D:\Dhruval\Android\JobReferDemo\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_d3e4038a8c242aade8c91448b2e13f53ab8fc8b7.jar" />
+    </item>
+    <item
+        jar="D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="D:\Dhruval\Android\JobReferDemo\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.1_0fa710d2592bc13bee634e7745dd30ecb5bd43b8.jar" />
+    </item>
+
+</items>
