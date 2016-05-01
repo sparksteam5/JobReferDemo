@@ -1,10 +1,10 @@
 [
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
     },
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\src\\main\\res\\menu\\main.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\src\\main\\res\\menu\\main.xml"
     }
 ]

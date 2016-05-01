@@ -1,66 +1,66 @@
 [
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_fab_in.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_snackbar_out.xml"
     },
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_exit.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_enter.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_down.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\src\\main\\res\\anim\\slide_down.xml"
     },
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_bottom.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_out.xml"
     },
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_fab_in.xml"
     },
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_fab_out.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_enter.xml"
     },
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_top.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_snackbar_in.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_out.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_snackbar_in.xml"
     },
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_up.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\src\\main\\res\\anim\\slide_up.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_bottom.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_up.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\src\\main\\res\\anim\\slide_up.xml"
     },
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_snackbar_out.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_top.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_in.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_fab_out.xml"
     },
     {
-        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_down.xml",
-        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\src\\main\\res\\anim\\slide_down.xml"
+        "merged": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "D:\\Android_Project\\152016\\JobReferDemo\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_bottom.xml"
     }
 ]
