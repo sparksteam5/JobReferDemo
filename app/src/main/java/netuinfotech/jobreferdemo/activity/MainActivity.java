@@ -26,23 +26,37 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+//        txt = (TextView) findViewById(R.id.txt);
+
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(0).setChecked(true);
 
-        Fragment fragment = new FragmentHome();
+        Fragment fragment = new FragmentJobList();
         if (fragment != null) {
             FragmentManager fragmentManager = getFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container_body, fragment);
             fragmentTransaction.commit();
         }
+
     }
 
     @Override
@@ -85,9 +99,13 @@ public class MainActivity extends AppCompatActivity
         Fragment fragment = null;
 
         if (id == R.id.nav_camera) {
-            fragment = new FragmentHome();
+            fragment = new FragmentJobList();
         } else if (id == R.id.nav_gallery) {
             fragment = new FragmentProfile();
+        } else if (id == R.id.nav_job) {
+            fragment = new FragmentJob();
+//        } else if (id == R.id.nav_joblist) {
+//            fragment = new FragmentJobList();
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

@@ -28,7 +28,7 @@ import java.util.Map;
 
 import netuinfotech.jobreferdemo.R;
 import netuinfotech.jobreferdemo.app.AppConfig;
-import netuinfotech.jobreferdemo.app.AppController;
+import netuinfotech.jobreferdemo.app.AppController1;
 
 public class LoginActivity extends Activity {
     private static final String TAG = LoginActivity.class.getSimpleName();
@@ -183,7 +183,7 @@ public class LoginActivity extends Activity {
         };
 
         // Adding request to request queue
-        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
+        AppController1.getInstance().addToRequestQueue(strReq, tag_string_req);
     }
 
     private void showDialog() {

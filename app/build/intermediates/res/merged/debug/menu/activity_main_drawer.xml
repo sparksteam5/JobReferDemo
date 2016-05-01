@@ -11,6 +11,11 @@
             android:icon="@drawable/profile"
             android:title="Profile" />
 
+        <item
+            android:id="@+id/nav_job"
+            android:icon="@drawable/icon"
+            android:title="Job" />
+
     </group>
 
     <item android:title="Communicate">

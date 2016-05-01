@@ -31,6 +31,8 @@ MERGED from [com.android.support:support-v4:23.1.1] D:\Dhruval\Android\JobReferD
 MERGED from [com.android.support:appcompat-v7:23.1.1] D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.mcxiaoke.volley:library-aar:1.0.0] D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\library-aar\1.0.0\AndroidManifest.xml:5:5-19
+MERGED from [com.android.support:cardview-v7:23.0.1] D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:12:9-41
 	android:supportsRtl
@@ -42,7 +44,7 @@ MERGED from [com.mcxiaoke.volley:library-aar:1.0.0] D:\Dhruval\Android\JobReferD
 	android:theme
 		ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:14:9-40
 	android:name
-		ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:9:9-42
+		ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:9:9-43
 activity#netuinfotech.jobreferdemo.activity.LoginActivity
 ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:15:9-25:20
 	android:label
@@ -114,6 +116,9 @@ MERGED from [com.android.support:support-v4:23.1.1] D:\Dhruval\Android\JobReferD
 MERGED from [com.android.support:appcompat-v7:23.1.1] D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.1.1] D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
 MERGED from [com.mcxiaoke.volley:library-aar:1.0.0] D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\library-aar\1.0.0\AndroidManifest.xml:3:5-72
+MERGED from [com.android.support:cardview-v7:23.0.1] D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.1.1] D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		INJECTED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml
