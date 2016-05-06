@@ -16,7 +16,7 @@ import netuinfotech.jobreferdemo.R;
  */
 public class FragmentHome extends Fragment {
 
-    TextView txt;
+    TextView txt,txt2;
 
     @Nullable
     @Override
