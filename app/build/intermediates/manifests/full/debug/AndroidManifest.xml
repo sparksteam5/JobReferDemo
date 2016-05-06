@@ -53,6 +53,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="netuinfotech.jobreferdemo.activity.MainActivity" />
         </activity>
+        <activity
+            android:name="netuinfotech.jobreferdemo.activity.JobDetail"
+            android:label="@string/title_activity_job_detail"
+            android:parentActivityName="netuinfotech.jobreferdemo.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="netuinfotech.jobreferdemo.activity.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

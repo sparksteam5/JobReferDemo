@@ -20,12 +20,20 @@
         "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\layout\\design_navigation_menu.xml"
     },
     {
+        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_job_detail.xml",
+        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\src\\main\\res\\layout\\activity_job_detail.xml"
+    },
+    {
         "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_joblist.xml",
         "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\src\\main\\res\\layout\\fragment_joblist.xml"
     },
     {
         "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
         "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_job_detail.xml",
+        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\src\\main\\res\\layout\\content_job_detail.xml"
     },
     {
         "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_main.xml",

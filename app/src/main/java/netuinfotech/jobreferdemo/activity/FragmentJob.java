@@ -21,6 +21,8 @@ import com.android.volley.toolbox.StringRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,6 +40,7 @@ public class FragmentJob extends Fragment{
     Button btnAdd;
 
     private ProgressDialog pDialog;
+    String formattedDate;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -80,6 +83,14 @@ public class FragmentJob extends Fragment{
                 addJob();
             }
         });
+
+        //Get Current Date
+        Calendar c = Calendar.getInstance();
+        System.out.println("Current time => " + c.getTime());
+
+        SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
+        formattedDate = df.format(c.getTime());
+
     }
 
     public  void addJob(){
@@ -130,7 +141,7 @@ public class FragmentJob extends Fragment{
 
                 params.put("title", txtTitle.getText().toString());
                 params.put("name", txtName.getText().toString());
-//                params.put("technology", txtTech.getText().toString());
+                params.put("date", formattedDate);
 //                params.put("vacany", spnVacnay.getSelectedItem().toString());
                 params.put("address", txtAddress.getText().toString());
                 params.put("description", txtDescription.getText().toString());

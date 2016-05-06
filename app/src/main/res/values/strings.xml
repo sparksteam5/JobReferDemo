@@ -57,6 +57,7 @@
         <item>10</item>
     </string-array>
     <string name="title_activity_agreement">AgreementActivity</string>
+    <string name="title_activity_job_detail">JobDetail</string>
 
 
 </resources>

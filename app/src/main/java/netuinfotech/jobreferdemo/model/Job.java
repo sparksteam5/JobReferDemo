@@ -2,7 +2,7 @@ package netuinfotech.jobreferdemo.model;
 
 public class Job {
 
-	private String title, name, technology, vacany, address, description;
+	private String title, name, date, address, description;
 
 	public String getName() {
 		return name;
@@ -10,22 +10,6 @@ public class Job {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getTechnology() {
-		return technology;
-	}
-
-	public void setTechnology(String technology) {
-		this.technology = technology;
-	}
-
-	public String getVacany() {
-		return vacany;
-	}
-
-	public void setVacany(String vacany) {
-		this.vacany= vacany;
 	}
 
 	public String getTitle() {
@@ -50,5 +34,13 @@ public class Job {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
 	}
 }

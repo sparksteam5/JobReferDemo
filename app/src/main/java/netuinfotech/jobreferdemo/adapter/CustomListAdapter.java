@@ -74,8 +74,8 @@ public class CustomListAdapter extends BaseAdapter {
 		title.setText(m.getTitle());
 		company.setText(m.getName());
 		address.setText(m.getAddress());
-		vacany.setText(m.getVacany());
-		tech.setText(m.getTechnology());
+//		vacany.setText(m.getVacany());
+//		tech.setText(m.getTechnology());
 		description.setText(m.getDescription());
 		
 		return convertView;

@@ -3,7 +3,7 @@
     package="netuinfotech.jobreferdemo">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:name=".app.AppController1"
@@ -41,6 +41,15 @@
         <activity
             android:name=".activity.AgreementActivity"
             android:label="@string/title_activity_agreement"
+            android:parentActivityName=".activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="netuinfotech.jobreferdemo.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.JobDetail"
+            android:label="@string/title_activity_job_detail"
             android:parentActivityName=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

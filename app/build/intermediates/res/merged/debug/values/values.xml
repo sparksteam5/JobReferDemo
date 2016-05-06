@@ -358,6 +358,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_agreement">AgreementActivity</string>
+    <string name="title_activity_job_detail">JobDetail</string>
     <string name="welcome">Welcome</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

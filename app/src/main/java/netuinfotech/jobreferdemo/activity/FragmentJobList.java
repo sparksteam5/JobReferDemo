@@ -28,6 +28,7 @@ import java.util.Map;
 
 import netuinfotech.jobreferdemo.R;
 import netuinfotech.jobreferdemo.adapter.CustomListAdapter;
+import netuinfotech.jobreferdemo.adapter.MyRecyclerViewAdapter;
 import netuinfotech.jobreferdemo.app.AppConfig;
 import netuinfotech.jobreferdemo.app.AppController1;
 import netuinfotech.jobreferdemo.model.Job;
@@ -65,17 +66,13 @@ public class FragmentJobList extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-//        lstJob = (ListView) getView().findViewById(R.id.lst1);
-//        adapter = new CustomListAdapter(getActivity(), jobList);
-//        lstJob.setAdapter(adapter);
-
         mRecyclerView = (RecyclerView) getView().findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
 
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new MyRecyclerViewAdapter(jobList);
+        mAdapter = new MyRecyclerViewAdapter(jobList,getActivity());
         mRecyclerView.setAdapter(mAdapter);
 
         // Progress dialog
@@ -84,47 +81,7 @@ public class FragmentJobList extends Fragment {
 
         setJobList();
 
-//        lstJob.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//
-//            }
-//        });
-//
-//        lstJob.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//            @Override
-//            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-//                view.setSelected(true);
-//                return false;
-//            }
-//        });
-//
-//        lstJob.setMultiChoiceModeListener(new AbsListView.MultiChoiceModeListener() {
-//            @Override
-//            public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
-//
-//            }
-//
-//            @Override
-//            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
-//                return false;
-//            }
-//
-//            @Override
-//            public void onDestroyActionMode(ActionMode mode) {
-//
-//            }
-//        });
+
     }
 
     public void setJobList(){
@@ -159,8 +116,7 @@ public class FragmentJobList extends Fragment {
 
                             Job job = new Job();
                             job.setName(obj.getString("name"));
-//                            job.setTechnology(obj.getString("technology"));
-//                            job.setVacany(obj.getString("vacany"));
+                            job.setDate(obj.getString("date"));
                             job.setTitle(obj.getString("title"));
                             job.setAddress(obj.getString("address"));
                             job.setDescription(obj.getString("description"));

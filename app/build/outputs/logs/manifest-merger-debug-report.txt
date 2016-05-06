@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:2:1-52:12
+ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:2:1-61:12
 	package
 		ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml
@@ -18,11 +18,11 @@ ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:5:5-
 	android:name
 		ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:6:5-75
+ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:6:5-76
 	android:name
 		ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:6:22-73
 application
-ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:8:5-50:19
+ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:8:5-59:19
 MERGED from [com.android.support:design:23.1.1] D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.1.1] D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
@@ -105,6 +105,16 @@ ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:46:1
 		ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:48:17-80
 	android:name
 		ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:47:17-63
+activity#netuinfotech.jobreferdemo.activity.JobDetail
+ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:50:9-58:20
+	android:label
+		ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:52:13-62
+	android:parentActivityName
+		ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:53:13-64
+	android:theme
+		ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:54:13-56
+	android:name
+		ADDED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml:51:13-47
 uses-sdk
 INJECTED from D:\Dhruval\Android\JobReferDemo\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:23.1.1] D:\Dhruval\Android\JobReferDemo\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\AndroidManifest.xml:20:5-43
