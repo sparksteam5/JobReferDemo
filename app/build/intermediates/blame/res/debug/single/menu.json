@@ -10,5 +10,9 @@
     {
         "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_job_detail.xml",
         "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\src\\main\\res\\menu\\menu_job_detail.xml"
+    },
+    {
+        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_temple_list.xml",
+        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\src\\main\\res\\menu\\menu_temple_list.xml"
     }
 ]

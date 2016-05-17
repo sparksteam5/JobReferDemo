@@ -1,8 +1,3 @@
-/**
- * Author: Ravi Tamada
- * URL: www.androidhive.info
- * twitter: http://twitter.com/ravitamada
- */
 package netuinfotech.jobreferdemo.activity;
 
 import android.app.Activity;

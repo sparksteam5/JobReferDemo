@@ -2,7 +2,9 @@ package netuinfotech.jobreferdemo.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.ShareActionProvider;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,13 +15,18 @@ import netuinfotech.jobreferdemo.R;
 public class JobDetail extends AppCompatActivity {
 
     TextView txtTitle, txtCompany, txtDate, txtAddress, txtDescription;
+    private ShareActionProvider mShareActionProvider;
+    StringBuffer shareString=new StringBuffer();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_job_detail);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         txtTitle= (TextView) findViewById(R.id.title);
         txtCompany= (TextView) findViewById(R.id.company);
@@ -35,16 +42,12 @@ public class JobDetail extends AppCompatActivity {
         txtAddress.setText(ob.getStringExtra("address"));
         txtDescription.setText(ob.getStringExtra("description"));
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+        shareString.append("Job Requirement").append("\n");
+        shareString.append("Job Title : ").append(ob.getStringExtra("title")).append("\n");
+        shareString.append("Company : ").append(ob.getStringExtra("company")).append("\n");
+        shareString.append("Date : ").append(ob.getStringExtra("date")).append("\n");
+        shareString.append("Description : ").append(ob.getStringExtra("description")).append("\n");
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
@@ -56,6 +59,16 @@ public class JobDetail extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_job_detail, menu);
+
+        // Locate MenuItem with ShareActionProvider
+        MenuItem item = menu.findItem(R.id.share);
+
+        // Fetch and store ShareActionProvider
+        mShareActionProvider = (ShareActionProvider) MenuItemCompat
+                .getActionProvider(item);
+
+        mShareActionProvider.setShareIntent(createShareIntent());
+
         return true;
     }
 
@@ -75,5 +88,12 @@ public class JobDetail extends AppCompatActivity {
         }
     }
 
+    private Intent createShareIntent() {
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, shareString.toString());
+        sendIntent.setType("text/plain");
+        return sendIntent;
+    }
 
 }

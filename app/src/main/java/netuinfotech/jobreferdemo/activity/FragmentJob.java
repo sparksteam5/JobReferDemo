@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -30,13 +29,9 @@ import netuinfotech.jobreferdemo.R;
 import netuinfotech.jobreferdemo.app.AppConfig;
 import netuinfotech.jobreferdemo.app.AppController1;
 
-/**
- * Created by Jay Mataji on 3/29/2016.
- */
 public class FragmentJob extends Fragment{
 
-    EditText txtTitle, txtName, txtTech, txtAddress, txtDescription;
-    Spinner spnVacnay;
+    EditText txtTitle, txtName,txtAddress, txtDescription, txtSalaryType;
     Button btnAdd;
 
     private ProgressDialog pDialog;
@@ -64,6 +59,7 @@ public class FragmentJob extends Fragment{
 //        txtTech=(EditText)getView().findViewById(R.id.txtTech);
         txtAddress=(EditText)getView().findViewById(R.id.txtAddress);
         txtDescription=(EditText)getView().findViewById(R.id.txtDescription);
+        txtSalaryType=(EditText)getView().findViewById(R.id.txtSalaryType);
 
 //        spnVacnay=(Spinner)getView().findViewById(R.id.spn_vacany);
         btnAdd=(Button)getView().findViewById(R.id.btnAdd);
@@ -145,6 +141,7 @@ public class FragmentJob extends Fragment{
 //                params.put("vacany", spnVacnay.getSelectedItem().toString());
                 params.put("address", txtAddress.getText().toString());
                 params.put("description", txtDescription.getText().toString());
+                params.put("salarytype", txtSalaryType.getText().toString());
                 return params;
             }
         };

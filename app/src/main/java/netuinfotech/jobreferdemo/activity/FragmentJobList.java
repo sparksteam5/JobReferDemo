@@ -2,12 +2,18 @@ package netuinfotech.jobreferdemo.activity;
 
 import android.app.Fragment;
 import android.app.ProgressDialog;
+import android.app.SearchManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
@@ -24,6 +30,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 import netuinfotech.jobreferdemo.R;
@@ -33,9 +40,6 @@ import netuinfotech.jobreferdemo.app.AppConfig;
 import netuinfotech.jobreferdemo.app.AppController1;
 import netuinfotech.jobreferdemo.model.Job;
 
-/**
- * Created by Jay Mataji on 3/29/2016.
- */
 public class FragmentJobList extends Fragment {
 
     ListView lstJob;
@@ -45,13 +49,16 @@ public class FragmentJobList extends Fragment {
     JSONArray jobs = null;
 
     private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
+    public RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private static String LOG_TAG = "CardViewActivity";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setHasOptionsMenu(true);
+
     }
 
     @Nullable
@@ -110,7 +117,7 @@ public class FragmentJobList extends Fragment {
                         JSONObject uid = jObj.getJSONObject("data");
                         jobs=uid.getJSONArray("users");
 
-                        for (int i = 0; i < jobs.length(); i++) {
+                        for (int i = jobs.length()-1; i > 0; i--) {
 
                             JSONObject obj = jobs.getJSONObject(i);
 
@@ -130,8 +137,7 @@ public class FragmentJobList extends Fragment {
                                 "Job Not Found", Toast.LENGTH_LONG).show();
                     }
 
-//                    adapter.arraylist.addAll(jobList);
-//                    adapter.notifyDataSetChanged();
+                    MyRecyclerViewAdapter.arraylist.addAll(jobList);
                     mAdapter.notifyDataSetChanged();
 
                 } catch (JSONException e) {
@@ -168,6 +174,69 @@ public class FragmentJobList extends Fragment {
     private void hideDialog() {
         if (pDialog.isShowing())
             pDialog.dismiss();
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+
+//        getActivity().getMenuInflater().inflate(R.menu.menu_category,
+//                menu);
+
+        inflater.inflate(R.menu.menu_temple_list,menu);
+
+        SearchManager searchManager = (SearchManager)getActivity().getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menu.findItem(R.id.search)
+                .getActionView();
+
+        searchView.setSearchableInfo(searchManager
+                .getSearchableInfo(getActivity().getComponentName()));
+        searchView.setIconifiedByDefault(false);
+
+        SearchView.OnQueryTextListener textChangeListener = new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                // this is your adapter that will be filtered
+                // myAdapter.getFilter().filter(newText);
+                // System.out.println("on text chnge text: " + newText);
+                Log.d("hello", newText);
+
+                String text = newText.toString().toLowerCase(
+                        Locale.getDefault());
+                MyRecyclerViewAdapter.filter(text);
+                resetDataset();
+
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                // this is your adapter that will be filtered
+                // myAdapter.getFilter().filter(query);
+                // System.out.println("on query submit: " + query);
+                return true;
+            }
+        };
+        searchView.setOnQueryTextListener(textChangeListener);
+
+        super.onCreateOptionsMenu(menu, inflater);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void resetDataset(){
+        mAdapter.notifyDataSetChanged();
     }
 
 }

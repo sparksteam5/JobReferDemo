@@ -48,6 +48,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:text="Date Listed"
+                    android:textStyle="bold"
                     android:textSize="12dp" />
 
                 <TextView
@@ -73,6 +74,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:text="Address"
+                    android:textStyle="bold"
                     android:textSize="12dp" />
 
                 <TextView
@@ -96,13 +98,14 @@
                 android:text="dsmdlaskdasdaj"
                 android:textSize="10dp" />
 
+            <!--
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Refer A JOB"
                 android:layout_marginTop="15dp"
                 android:layout_below="@+id/description"/>
-
+            -->
         </RelativeLayout>
 
 

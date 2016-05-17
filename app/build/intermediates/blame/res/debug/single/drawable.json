@@ -126,5 +126,9 @@
     {
         "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\up.png",
         "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\src\\main\\res\\drawable\\up.png"
+    },
+    {
+        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_search.png",
+        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\src\\main\\res\\drawable\\ic_action_search.png"
     }
 ]

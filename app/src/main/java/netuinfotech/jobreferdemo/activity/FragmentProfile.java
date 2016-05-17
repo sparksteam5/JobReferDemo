@@ -33,9 +33,6 @@ import netuinfotech.jobreferdemo.R;
 import netuinfotech.jobreferdemo.app.AppConfig;
 import netuinfotech.jobreferdemo.app.AppController1;
 
-/**
- * Created by Jay Mataji on 3/22/2016.
- */
 public class FragmentProfile extends Fragment {
 
     Spinner spnQual, spnYear;
