@@ -5,6 +5,11 @@
         <item>Bsc IT</item>
         <item>MCA</item>
     </string-array>
+    <string-array name="question_array">
+        <item>what is your pet name?</item>
+        <item>What is your childhood name?</item>
+        <item>What is first school?</item>
+    </string-array>
     <string-array name="vacany_array">
         <item>1</item>
         <item>2</item>

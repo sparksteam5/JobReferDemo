@@ -26,9 +26,11 @@ import netuinfotech.jobreferdemo.app.AppConfig;
 import netuinfotech.jobreferdemo.app.AppController1;
 
 public class LoginActivity extends Activity {
+
     private static final String TAG = LoginActivity.class.getSimpleName();
+
     private Button btnLogin;
-    private Button btnLinkToRegister,btnLinkToAgreement;
+    private Button btnLinkToRegister, btnLinkToAgreement, btnForgot;
     private EditText inputEmail;
     private EditText inputPassword;
     private ProgressDialog pDialog;
@@ -42,7 +44,8 @@ public class LoginActivity extends Activity {
         inputPassword = (EditText) findViewById(R.id.password);
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnLinkToRegister = (Button) findViewById(R.id.btnLinkToRegisterScreen);
-        btnLinkToAgreement=(Button)findViewById(R.id.btnLinkToAgreement);
+        btnLinkToAgreement = (Button) findViewById(R.id.btnLinkToAgreement);
+        btnForgot= (Button) findViewById(R.id.btnForgot);
 
         // Progress dialog
         pDialog = new ProgressDialog(this);
@@ -52,19 +55,23 @@ public class LoginActivity extends Activity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
+
+                int bool = 0;
                 String email = inputEmail.getText().toString().trim();
                 String password = inputPassword.getText().toString().trim();
 
-                // Check for empty data in the form
-                if (!email.isEmpty() && !password.isEmpty()) {
-                    // login user
-                    Log.d("output", email + password);
+                if (email.isEmpty()) {
+                    inputEmail.setError(inputEmail.getHint() + " Required");
+                    bool = 1;
+                }
+
+                if (password.isEmpty()) {
+                    inputPassword.setError(inputPassword.getHint() + " Required");
+                    bool = 1;
+                }
+
+                if (bool == 0) {
                     checkLogin(email, password);
-                } else {
-                    // Prompt user to enter credentials
-                    Toast.makeText(getApplicationContext(),
-                            "Please enter the credentials!", Toast.LENGTH_LONG)
-                            .show();
                 }
             }
         });
@@ -89,11 +96,17 @@ public class LoginActivity extends Activity {
             }
         });
 
+        btnForgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent ob=new Intent(LoginActivity.this,ForgotActivity.class);
+                startActivity(ob);
+            }
+        });
+
     }
 
-    /**
-     * function to verify login details in mysql db
-     * */
     private void checkLogin(final String email, final String password) {
         // Tag used to cancel the request
         String tag_string_req = "req_login";
@@ -111,22 +124,22 @@ public class LoginActivity extends Activity {
 
                 try {
                     JSONObject jObj = new JSONObject(response);
-                    int code= jObj.getInt("code");
-                    Log.d("Code",code+"");
+                    int code = jObj.getInt("code");
+                    Log.d("Code", code + "");
 
                     // Check for error node in json
-                    if (code==200) {
+                    if (code == 200) {
 
                         JSONObject uid = jObj.getJSONObject("data");
                         JSONObject user = uid.getJSONObject("user");
 
-                        Integer id=user.getInt("id");
+                        Integer id = user.getInt("id");
                         String name = user.getString("name");
-                        String email= user.getString("email");
-                        int status=Integer.parseInt(user.getString("status"));
+                        String email = user.getString("email");
+                        int status = Integer.parseInt(user.getString("status"));
 
-                        if(status==1) {
-                           // Launch main activity
+                        if (status == 1) {
+                            // Launch main activity
                             Intent intent = new Intent(LoginActivity.this,
                                     MainActivity.class);
 
@@ -136,11 +149,11 @@ public class LoginActivity extends Activity {
 
                             startActivity(intent);
                             finish();
-                        }else{
-                            Toast.makeText(LoginActivity.this,"User is not verified",Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(LoginActivity.this, "User is not verified", Toast.LENGTH_LONG).show();
                         }
                     } else {
-                        Log.d("dsd","calll");
+                        Log.d("dsd", "calll");
                         // Error in login. Get the error message
                         //String errorMsg = jObj.getString("error");
                         Toast.makeText(LoginActivity.this,

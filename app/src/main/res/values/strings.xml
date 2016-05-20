@@ -56,6 +56,13 @@
         <item>9</item>
         <item>10</item>
     </string-array>
+
+    <string-array name="question_array">
+        <item>what is your pet name?</item>
+        <item>What is your childhood name?</item>
+        <item>What is first school?</item>
+    </string-array>
+
     <string name="title_activity_agreement">AgreementActivity</string>
     <string name="title_activity_job_detail">JobDetail</string>
 

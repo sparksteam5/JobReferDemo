@@ -12,4 +12,7 @@
 		public String URL_VIEW = IP_URL + "job/users/";
 		public static String URL_JOB_ADD= IP_URL +"job/users/jobcreate.json";
 		public static String URL_JOB_SHOW= IP_URL +  "job/jobrefer.json";
+		public static String URL_CHECKUSER = IP_URL + "job/users/checkuser.json";
+		public static String URL_CHANGEPASSWORD = IP_URL + "job/users/checkuser.json";
+
 	}

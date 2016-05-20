@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.Request.Method;
@@ -20,24 +22,25 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import netuinfotech.jobreferdemo.R;
 import netuinfotech.jobreferdemo.app.AppConfig;
-import netuinfotech.jobreferdemo.app.AppController;
-import netuinfotech.jobreferdemo.helper.SQLiteHandler;
-import netuinfotech.jobreferdemo.helper.SessionManager;
+import netuinfotech.jobreferdemo.app.AppController1;
 
 
 public class RegisterActivity extends Activity {
+
     private static final String TAG = RegisterActivity.class.getSimpleName();
     private Button btnRegister;
     private Button btnLinkToLogin;
     private EditText inputFullName;
     private EditText inputEmail;
     private EditText inputPassword;
+    private EditText inputAnswer;
     private ProgressDialog pDialog;
-    private SessionManager session;
-    private SQLiteHandler db;
+    Spinner spnQuestion;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,8 +50,16 @@ public class RegisterActivity extends Activity {
         inputFullName = (EditText) findViewById(R.id.name);
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
+        inputAnswer= (EditText) findViewById(R.id.txtAnswer);
         btnRegister = (Button) findViewById(R.id.btnRegister);
         btnLinkToLogin = (Button) findViewById(R.id.btnLinkToLoginScreen);
+
+        spnQuestion=(Spinner)findViewById(R.id.spn_question);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.question_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spnQuestion.setAdapter(adapter);
 
         // Progress dialog
         pDialog = new ProgressDialog(this);
@@ -57,17 +68,49 @@ public class RegisterActivity extends Activity {
         // Register Button Click event
         btnRegister.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                int bool = 0;
                 String name = inputFullName.getText().toString().trim();
                 String email = inputEmail.getText().toString().trim();
                 String password = inputPassword.getText().toString().trim();
+                String answer=inputAnswer.getText().toString().trim();
 
-                if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
-                    registerUser(name, email, password);
-                } else {
-                    Toast.makeText(getApplicationContext(),
-                            "Please enter your details!", Toast.LENGTH_LONG)
-                            .show();
+                if (name.isEmpty()) {
+                    inputFullName.setError(inputFullName.getHint() + " Required");
+                    bool = 1;
                 }
+
+                if (email.isEmpty()) {
+                    inputEmail.setError(inputEmail.getHint() + " Required");
+                    bool = 1;
+                }
+
+                if (!isValidEmail(email)) {
+                    inputEmail.setError("Invalid Email");
+                    bool=1;
+                }
+
+                if (password.isEmpty()) {
+                    inputPassword.setError(inputPassword.getHint() + " Required");
+                    bool = 1;
+                }
+
+                if (answer.isEmpty()) {
+                    inputAnswer.setError(inputAnswer.getHint() + " Required");
+                    bool = 1;
+                }
+
+
+                if (bool == 0) {
+                    registerUser(name, email, password);
+                }
+
+//                if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
+//                    registerUser(name, email, password);
+//                } else {
+//                    Toast.makeText(getApplicationContext(),
+//                            "Please enter your details!", Toast.LENGTH_LONG)
+//                            .show();
+//                }
             }
         });
 
@@ -81,7 +124,16 @@ public class RegisterActivity extends Activity {
                 finish();
             }
         });
+    }
 
+    // validating email id
+    private boolean isValidEmail(String email) {
+        String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+
+        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
     }
 
     /**
@@ -141,12 +193,14 @@ public class RegisterActivity extends Activity {
                 params.put("name", name);
                 params.put("email", email);
                 params.put("password", password);
+                params.put("question", spnQuestion.getSelectedItem().toString());
+                params.put("answer", inputAnswer.getText().toString());
                 return params;
             }
         };
 
         // Adding request to request queue
-        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
+        AppController1.getInstance().addToRequestQueue(strReq, tag_string_req);
     }
 
     private void showDialog() {

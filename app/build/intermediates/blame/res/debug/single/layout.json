@@ -12,6 +12,10 @@
         "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
+        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_forgot.xml",
+        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\src\\main\\res\\layout\\activity_forgot.xml"
+    },
+    {
         "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_main.xml",
         "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\src\\main\\res\\layout\\app_bar_main.xml"
     },
@@ -122,6 +126,10 @@
     {
         "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
         "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_change.xml",
+        "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\src\\main\\res\\layout\\activity_change.xml"
     },
     {
         "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",

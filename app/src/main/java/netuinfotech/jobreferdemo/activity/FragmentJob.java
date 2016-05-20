@@ -76,7 +76,48 @@ public class FragmentJob extends Fragment{
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addJob();
+
+                int bool=0;
+                String t=txtTitle.getText().toString();
+                String c=txtName.getText().toString();
+                String a=txtAddress.getText().toString();
+                String s=txtSalaryType.getText().toString();
+                String d=txtDescription.getText().toString();
+
+                if(t.length()==0) {
+                    txtTitle.setError(txtTitle.getHint() + " Required");
+                    txtTitle.setFocusable(true);
+                    bool=1;
+                }
+
+                if(c.length()==0){
+                    txtName.setError(txtName.getHint() + " Required");
+                    txtName.setFocusable(true);
+                    bool=1;
+                }
+
+                if(a.length()==0){
+                    txtAddress.setError(txtAddress.getHint() + " Required");
+                    txtAddress.setFocusable(true);
+                    bool=1;
+                }
+
+                if(s.length()==0){
+                    txtSalaryType.setError(txtSalaryType.getHint() + " Required");
+                    txtSalaryType.setFocusable(true);
+                    bool=1;
+                }
+
+                if(d.length()==0){
+                    txtDescription.setError(txtDescription.getHint() + " Required");
+                    txtDescription.setFocusable(true);
+                    bool=1;
+                }
+
+                if(bool==0){
+                    addJob();
+                }
+
             }
         });
 

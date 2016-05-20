@@ -56,6 +56,19 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="netuinfotech.jobreferdemo.activity.MainActivity" />
         </activity>
+        <activity
+            android:name=".activity.ForgotActivity"
+            android:parentActivityName=".activity.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="netuinfotech.jobreferdemo.activity.LoginActivity" />
+        </activity>
+        <activity android:name=".activity.ChangeActivity"
+            android:parentActivityName=".activity.ForgotActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="netuinfotech.jobreferdemo.activity.ForgotActivity" />
+        </activity>
     </application>
 
 </manifest>
