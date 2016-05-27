@@ -2,7 +2,7 @@ package netuinfotech.jobreferdemo.model;
 
 public class Job {
 
-	private String title, name, date, address, description;
+	private String title, name, date, address, description, salarytype;
 
 	public String getName() {
 		return name;
@@ -42,5 +42,13 @@ public class Job {
 
 	public void setDate(String date) {
 		this.date = date;
+	}
+
+	public String getSalarytype() {
+		return salarytype;
+	}
+
+	public void setSalarytype(String salarytype) {
+		this.salarytype = salarytype;
 	}
 }

@@ -22,12 +22,11 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import netuinfotech.jobreferdemo.R;
 import netuinfotech.jobreferdemo.app.AppConfig;
-import netuinfotech.jobreferdemo.app.AppController1;
+import netuinfotech.jobreferdemo.app.AppController;
+import netuinfotech.jobreferdemo.model.Controller;
 
 
 public class RegisterActivity extends Activity {
@@ -50,11 +49,11 @@ public class RegisterActivity extends Activity {
         inputFullName = (EditText) findViewById(R.id.name);
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
-        inputAnswer= (EditText) findViewById(R.id.txtAnswer);
+        inputAnswer = (EditText) findViewById(R.id.txtAnswer);
         btnRegister = (Button) findViewById(R.id.btnRegister);
         btnLinkToLogin = (Button) findViewById(R.id.btnLinkToLoginScreen);
 
-        spnQuestion=(Spinner)findViewById(R.id.spn_question);
+        spnQuestion = (Spinner) findViewById(R.id.spn_question);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.question_array, android.R.layout.simple_spinner_item);
@@ -72,7 +71,7 @@ public class RegisterActivity extends Activity {
                 String name = inputFullName.getText().toString().trim();
                 String email = inputEmail.getText().toString().trim();
                 String password = inputPassword.getText().toString().trim();
-                String answer=inputAnswer.getText().toString().trim();
+                String answer = inputAnswer.getText().toString().trim();
 
                 if (name.isEmpty()) {
                     inputFullName.setError(inputFullName.getHint() + " Required");
@@ -84,15 +83,21 @@ public class RegisterActivity extends Activity {
                     bool = 1;
                 }
 
-                if (!isValidEmail(email)) {
+                if (!Controller.isValidEmail(email)) {
                     inputEmail.setError("Invalid Email");
-                    bool=1;
+                    bool = 1;
                 }
 
                 if (password.isEmpty()) {
                     inputPassword.setError(inputPassword.getHint() + " Required");
                     bool = 1;
                 }
+
+                if (!Controller.isValidPassword(password)) {
+                    inputPassword.setError("Strong Password Required");
+                    bool = 1;
+                }
+
 
                 if (answer.isEmpty()) {
                     inputAnswer.setError(inputAnswer.getHint() + " Required");
@@ -103,14 +108,6 @@ public class RegisterActivity extends Activity {
                 if (bool == 0) {
                     registerUser(name, email, password);
                 }
-
-//                if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
-//                    registerUser(name, email, password);
-//                } else {
-//                    Toast.makeText(getApplicationContext(),
-//                            "Please enter your details!", Toast.LENGTH_LONG)
-//                            .show();
-//                }
             }
         });
 
@@ -126,20 +123,6 @@ public class RegisterActivity extends Activity {
         });
     }
 
-    // validating email id
-    private boolean isValidEmail(String email) {
-        String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
-                + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-
-        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
-        Matcher matcher = pattern.matcher(email);
-        return matcher.matches();
-    }
-
-    /**
-     * Function to store user in MySQL database will post params(tag, name,
-     * email, password) to register url
-     */
     private void registerUser(final String name, final String email,
                               final String password) {
         // Tag used to cancel the request
@@ -159,7 +142,8 @@ public class RegisterActivity extends Activity {
                 try {
                     JSONObject jObj = new JSONObject(response);
                     int code = jObj.getInt("code");
-                    if (code == 200) {
+
+                    if (code == 201) {
                         Toast.makeText(getApplicationContext(), "User successfully registered. Try login now!", Toast.LENGTH_LONG).show();
                         // Launch login activity
                         Intent intent = new Intent(
@@ -167,16 +151,17 @@ public class RegisterActivity extends Activity {
                                 LoginActivity.class);
                         startActivity(intent);
                         finish();
-                    } else {
-
+                    } else if (code == 200) {
+                        Toast.makeText(getApplicationContext(), "User already exist", Toast.LENGTH_LONG).show();
                     }
-                } catch (JSONException e) {
+                } catch (
+                        JSONException e
+                        ) {
                     e.printStackTrace();
                 }
-
             }
-        }, new Response.ErrorListener() {
-
+        }
+                , new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "Registration Error: " + error.getMessage());
@@ -185,7 +170,6 @@ public class RegisterActivity extends Activity {
                 hideDialog();
             }
         }) {
-
             @Override
             protected Map<String, String> getParams() {
                 // Posting params to register url
@@ -200,7 +184,10 @@ public class RegisterActivity extends Activity {
         };
 
         // Adding request to request queue
-        AppController1.getInstance().addToRequestQueue(strReq, tag_string_req);
+        AppController.getInstance().
+
+                addToRequestQueue(strReq, tag_string_req);
+
     }
 
     private void showDialog() {

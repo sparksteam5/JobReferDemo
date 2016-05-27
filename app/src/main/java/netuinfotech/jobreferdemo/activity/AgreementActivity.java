@@ -18,7 +18,6 @@ public class AgreementActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        setTitle("Privacy Policy");
+        setTitle(R.string.agreement_title);
     }
-
 }

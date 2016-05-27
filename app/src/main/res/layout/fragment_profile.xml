@@ -13,8 +13,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_marginBottom="10dp"
-            android:layout_height="fill_parent">
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dp">
 
             <TextView
                 android:id="@+id/contact_form_title"
@@ -23,9 +23,9 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="2dp"
-                android:text="Personal Info"
+                android:text="@string/profile_personal_title"
                 android:textColor="@color/white"
-                android:textSize="30sp"
+                android:textSize="@dimen/font_size_title"
                 android:typeface="serif" />
 
             <Button
@@ -51,13 +51,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:background="@color/white"
-                android:hint="Name"
-                android:inputType="text"
-                android:textSize="12dp"
+                android:hint="@string/hint_profile_name"
+                android:inputType="textPersonName"
                 android:padding="10dp"
                 android:singleLine="true"
                 android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint" />
+                android:textColorHint="@color/input_login_hint"
+                android:textSize="@dimen/font_size" />
 
             <EditText
                 android:id="@+id/txtEmail"
@@ -65,13 +65,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:background="@color/white"
-                android:hint="Email"
-                android:textSize="12dp"
+                android:hint="@string/hint_email"
                 android:inputType="textEmailAddress"
                 android:padding="10dp"
                 android:singleLine="true"
                 android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint" />
+                android:textColorHint="@color/input_login_hint"
+                android:textSize="@dimen/font_size" />
 
             <EditText
                 android:id="@+id/txtPhone"
@@ -79,13 +79,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:background="@color/white"
-                android:hint="Phone"
-                android:textSize="12dp"
+                android:hint="@string/hint_profile_phone"
                 android:inputType="phone"
                 android:padding="10dp"
                 android:singleLine="true"
                 android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint" />
+                android:textColorHint="@color/input_login_hint"
+                android:textSize="@dimen/font_size" />
 
             <EditText
                 android:id="@+id/txtAdd"
@@ -96,20 +96,20 @@
                 android:breakStrategy="balanced"
                 android:fitsSystemWindows="true"
                 android:gravity="top|left"
-                android:textSize="12dp"
-                android:hint="Address"
+                android:hint="@string/hint_job_address"
                 android:inputType="textMultiLine"
                 android:padding="5dp"
                 android:singleLine="false"
                 android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint" />
+                android:textColorHint="@color/input_login_hint"
+                android:textSize="@dimen/font_small" />
 
         </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_marginBottom="10dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
 
             <TextView
                 android:id="@+id/title_education_info"
@@ -118,9 +118,9 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="2dp"
-                android:text="Education Info"
+                android:text="@string/profile_education_title"
                 android:textColor="@color/white"
-                android:textSize="30sp"
+                android:textSize="@dimen/font_size_title"
                 android:typeface="serif" />
 
             <Button
@@ -140,56 +140,17 @@
             android:orientation="vertical"
             android:visibility="gone">
 
-            <!--
-            <EditText
-                android:id="@+id/txtCollege"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:background="@color/white"
-                android:hint="School/College Name"
-                android:inputType="text"
-                android:padding="10dp"
-                android:singleLine="true"
-                android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint" />
-
-            <EditText
-                android:id="@+id/txtStartYear"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:background="@color/white"
-                android:hint="Start Year"
-                android:inputType="text"
-                android:padding="10dp"
-                android:singleLine="true"
-                android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint" />
-
-            <EditText
-                android:id="@+id/txtEndYear"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:background="@color/white"
-                android:hint="Start Year"
-                android:inputType="text"
-                android:padding="10dp"
-                android:singleLine="true"
-                android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint" />
-            -->
             <Spinner
                 android:id="@+id/spn_qualification"
                 android:layout_width="fill_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="10dp"
                 android:background="@color/white"
-                android:textSize="12dp"
                 android:singleLine="false"
                 android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint" />
+                android:textColorHint="@color/input_login_hint"
+                android:padding="5dp"
+                android:textSize="10dp" />
 
             <Spinner
                 android:id="@+id/spn_year"
@@ -197,10 +158,11 @@
                 android:layout_height="40dp"
                 android:layout_marginBottom="10dp"
                 android:background="@color/white"
-                android:textSize="12dp"
                 android:singleLine="false"
                 android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint" />
+                android:textColorHint="@color/input_login_hint"
+                android:padding="5dp"
+                android:textSize="10dp" />
 
             <EditText
                 android:id="@+id/txtPer"
@@ -208,13 +170,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:background="@color/white"
-                android:hint="Percentage"
+                android:hint="@string/hint_profile_percentage"
                 android:inputType="text"
-                android:textSize="12dp"
                 android:padding="10dp"
                 android:singleLine="true"
                 android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint" />
+                android:textColorHint="@color/input_login_hint"
+                android:textSize="@dimen/font_size" />
 
             <EditText
                 android:id="@+id/txtSkill"
@@ -222,20 +184,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:background="@color/white"
-                android:hint="Skill"
+                android:hint="@string/hint_profile_skills"
                 android:inputType="text"
                 android:padding="10dp"
-                android:textSize="12dp"
                 android:singleLine="true"
                 android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint" />
+                android:textColorHint="@color/input_login_hint"
+                android:textSize="@dimen/font_size" />
 
         </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_marginBottom="10dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
 
             <TextView
                 android:id="@+id/title_exp_info"
@@ -244,9 +206,9 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="2dp"
-                android:text="Experience Info"
+                android:text="@string/profile_experience_title"
                 android:textColor="@color/white"
-                android:textSize="30sp"
+                android:textSize="@dimen/font_size_title"
                 android:typeface="serif" />
 
             <Button
@@ -272,13 +234,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:background="@color/white"
-                android:hint="Company"
-                android:textSize="12dp"
+                android:hint="@string/hint_job_companyname"
                 android:inputType="text"
                 android:padding="10dp"
                 android:singleLine="true"
                 android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint" />
+                android:textColorHint="@color/input_login_hint"
+                android:textSize="@dimen/font_size" />
 
             <EditText
                 android:id="@+id/txtExp"
@@ -286,13 +248,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:background="@color/white"
-                android:hint="Experience"
-                android:textSize="12dp"
+                android:hint="@string/hint_profile_experience"
                 android:inputType="text"
                 android:padding="10dp"
                 android:singleLine="true"
                 android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint" />
+                android:textColorHint="@color/input_login_hint"
+                android:textSize="@dimen/font_size" />
 
         </LinearLayout>
 
@@ -302,7 +264,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dip"
             android:background="@color/btn_login_bg"
-            android:text="Submit"
+            android:text="@string/profile_button_text"
             android:textColor="@color/black" />
 
     </LinearLayout>

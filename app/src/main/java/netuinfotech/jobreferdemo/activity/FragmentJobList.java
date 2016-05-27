@@ -16,7 +16,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -34,16 +33,13 @@ import java.util.Locale;
 import java.util.Map;
 
 import netuinfotech.jobreferdemo.R;
-import netuinfotech.jobreferdemo.adapter.CustomListAdapter;
 import netuinfotech.jobreferdemo.adapter.MyRecyclerViewAdapter;
 import netuinfotech.jobreferdemo.app.AppConfig;
-import netuinfotech.jobreferdemo.app.AppController1;
+import netuinfotech.jobreferdemo.app.AppController;
 import netuinfotech.jobreferdemo.model.Job;
 
 public class FragmentJobList extends Fragment {
 
-    ListView lstJob;
-    private CustomListAdapter adapter;
     private ArrayList<Job> jobList = new ArrayList<Job>();
     private ProgressDialog pDialog;
     JSONArray jobs = null;
@@ -51,20 +47,17 @@ public class FragmentJobList extends Fragment {
     private RecyclerView mRecyclerView;
     public RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private static String LOG_TAG = "CardViewActivity";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setHasOptionsMenu(true);
-
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//        return super.onCreateView(inflater, container, savedInstanceState);
         View rootView = inflater.inflate(R.layout.activity_card_view, container, false);
         return rootView;
     }
@@ -87,8 +80,6 @@ public class FragmentJobList extends Fragment {
         pDialog.setCancelable(false);
 
         setJobList();
-
-
     }
 
     public void setJobList(){
@@ -127,8 +118,10 @@ public class FragmentJobList extends Fragment {
                             job.setTitle(obj.getString("title"));
                             job.setAddress(obj.getString("address"));
                             job.setDescription(obj.getString("description"));
+                            job.setSalarytype(obj.getString("salarytype"));
 
                             jobList.add(job);
+
                         }
 
                     } else {
@@ -163,7 +156,7 @@ public class FragmentJobList extends Fragment {
             }
         };
         // Adding request to request queue
-        AppController1.getInstance().addToRequestQueue(strReq, tag_string_req);
+        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
     }
 
     private void showDialog() {

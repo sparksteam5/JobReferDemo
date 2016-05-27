@@ -22,8 +22,8 @@
             android:layout_height="100dp"
             android:layout_marginBottom="40dp"
             android:gravity="center"
-            android:text="Welcome To JobRefer"
-            android:textSize="25dp"
+            android:text="@string/login_label_title"
+            android:textSize="@dimen/font_size_title"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -45,6 +45,7 @@
             android:inputType="textEmailAddress"
             android:padding="10dp"
             android:singleLine="true"
+            android:textSize="@dimen/font_size"
             android:textColor="@color/input_login"
             android:textColorHint="@color/input_login_hint" />
 
@@ -57,6 +58,7 @@
             android:hint="@string/hint_password"
             android:inputType="textPassword"
             android:padding="10dp"
+            android:textSize="@dimen/font_size"
             android:singleLine="true"
             android:textColor="@color/input_login"
             android:textColorHint="@color/input_login_hint" />
@@ -70,6 +72,7 @@
             android:layout_marginTop="20dip"
             android:background="@color/btn_login_bg"
             android:text="@string/btn_login"
+            android:textSize="12dp"
             android:textColor="@color/black" />
 
         <!-- Link to Login Screen -->
@@ -83,7 +86,7 @@
             android:text="@string/btn_link_to_register"
             android:textAllCaps="false"
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="@dimen/font_size" />
 
         <Button
             android:id="@+id/btnForgot"
@@ -91,10 +94,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
             android:background="@null"
-            android:text="Forgot Password"
+            android:text="@string/login_button_forgot"
             android:textAllCaps="false"
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="@dimen/font_size" />
 
 
     </LinearLayout>
@@ -104,10 +107,10 @@
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:background="@null"
-        android:text="privacy policy"
+        android:text="@string/login_button_privacy"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:textSize="15dp"
+        android:textSize="@dimen/font_size"
         android:layout_weight="0.15"
         android:allowUndo="false" />
 

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\Dhruval\\Android\\JobRefer\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_launcher.png",
+        "source": "D:\\Dhruval\\Android\\JobRefer\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_launcher.png",
         "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     }

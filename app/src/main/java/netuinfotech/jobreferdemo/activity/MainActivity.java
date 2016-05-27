@@ -90,8 +90,8 @@ public class MainActivity extends AppCompatActivity
             fragment = new FragmentProfile();
         } else if (id == R.id.nav_job) {
             fragment = new FragmentJob();
-//        } else if (id == R.id.nav_joblist) {
-//            fragment = new FragmentJobList();
+        } else if (id == R.id.nav_user) {
+            fragment = new FragmentUserList();
         } else if (id == R.id.nav_about) {
             fragment = new FragmentAboutus();
         } else if (id == R.id.nav_help) {

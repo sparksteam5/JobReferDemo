@@ -27,7 +27,7 @@ import java.util.Map;
 
 import netuinfotech.jobreferdemo.R;
 import netuinfotech.jobreferdemo.app.AppConfig;
-import netuinfotech.jobreferdemo.app.AppController1;
+import netuinfotech.jobreferdemo.app.AppController;
 
 public class FragmentJob extends Fragment{
 
@@ -45,7 +45,6 @@ public class FragmentJob extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//        return super.onCreateView(inflater, container, savedInstanceState);
         View rootView = inflater.inflate(R.layout.fragment_job, container, false);
         return rootView;
     }
@@ -56,18 +55,11 @@ public class FragmentJob extends Fragment{
 
         txtTitle=(EditText)getView().findViewById(R.id.txtTitle);
         txtName=(EditText)getView().findViewById(R.id.txtName);
-//        txtTech=(EditText)getView().findViewById(R.id.txtTech);
         txtAddress=(EditText)getView().findViewById(R.id.txtAddress);
         txtDescription=(EditText)getView().findViewById(R.id.txtDescription);
         txtSalaryType=(EditText)getView().findViewById(R.id.txtSalaryType);
 
-//        spnVacnay=(Spinner)getView().findViewById(R.id.spn_vacany);
         btnAdd=(Button)getView().findViewById(R.id.btnAdd);
-
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
-//                R.array.vacany_array, android.R.layout.simple_spinner_item);
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spnVacnay.setAdapter(adapter);
 
         // Progress dialog
         pDialog = new ProgressDialog(getActivity());
@@ -134,7 +126,7 @@ public class FragmentJob extends Fragment{
         // Tag used to cancel the request
         String tag_string_req = "req_job";
 
-        pDialog.setMessage("Registering ...");
+        pDialog.setMessage("Loading ...");
         showDialog();
 
         StringRequest strReq = new StringRequest(Request.Method.POST,
@@ -187,7 +179,7 @@ public class FragmentJob extends Fragment{
             }
         };
         // Adding request to request queue
-        AppController1.getInstance().addToRequestQueue(strReq, tag_string_req);
+        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
     }
 
     private void showDialog() {
@@ -199,5 +191,4 @@ public class FragmentJob extends Fragment{
         if (pDialog.isShowing())
             pDialog.dismiss();
     }
-
 }

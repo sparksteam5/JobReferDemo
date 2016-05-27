@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\Dhruval\\Android\\JobRefer\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "D:\\Dhruval\\Android\\JobRefer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v23\\abc_color_highlight_material.xml"
+    },
+    {
         "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
         "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v23\\abc_color_highlight_material.xml"
     }

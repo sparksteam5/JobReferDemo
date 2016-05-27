@@ -20,18 +20,16 @@ import java.util.Map;
 
 import netuinfotech.jobreferdemo.R;
 import netuinfotech.jobreferdemo.app.AppConfig;
-import netuinfotech.jobreferdemo.app.AppController1;
+import netuinfotech.jobreferdemo.app.AppController;
+import netuinfotech.jobreferdemo.model.Controller;
 
 public class ChangeActivity extends AppCompatActivity {
-
-    private static final String TAG = ChangeActivity.class.getSimpleName();
 
     EditText txtPassword, txtConfirmPassword;
     Button btnSubmit;
 
     private ProgressDialog pDialog;
     AppConfig obAC = new AppConfig();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +39,7 @@ public class ChangeActivity extends AppCompatActivity {
         txtPassword = (EditText) findViewById(R.id.password);
         txtConfirmPassword = (EditText) findViewById(R.id.confirmPassword);
 
-        btnSubmit=(Button)findViewById(R.id.btnSubmit);
+        btnSubmit = (Button) findViewById(R.id.btnSubmit);
 
         // Progress dialog
         pDialog = new ProgressDialog(this);
@@ -52,13 +50,12 @@ public class ChangeActivity extends AppCompatActivity {
 
         obAC.URL_PROFILE += id + "/pupdate.json";
 
-
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 int bool = 0;
-                String pass= txtPassword.getText().toString().trim();
+                String pass = txtPassword.getText().toString().trim();
                 String confirmPassword = txtConfirmPassword.getText().toString().trim();
 
                 if (pass.isEmpty()) {
@@ -71,13 +68,23 @@ public class ChangeActivity extends AppCompatActivity {
                     bool = 1;
                 }
 
-                if( (!pass.isEmpty() && !confirmPassword.isEmpty()) && !pass.equals(confirmPassword)){
+                if ((!pass.isEmpty() && !confirmPassword.isEmpty()) && !Controller.isValidPasswordConfirmpassword(pass,confirmPassword)) {
 
                     txtPassword.setError("Password Mismatch");
                     txtConfirmPassword.setError("Password Mismatch");
                     txtPassword.setText("");
                     txtConfirmPassword.setText("");
-                    bool=1;
+                    bool = 1;
+                }
+
+                if (!Controller.isValidPassword(pass)) {
+                    txtPassword.setError("Strong Password Required");
+                    bool = 1;
+                }
+
+                if (!Controller.isValidPassword(confirmPassword)) {
+                    txtConfirmPassword.setError("Strong Password Required");
+                    bool = 1;
                 }
 
                 if (bool == 0) {
@@ -107,8 +114,8 @@ public class ChangeActivity extends AppCompatActivity {
 
                     // Check for error node in json
                     if (flag) {
-                        Toast.makeText(ChangeActivity.this,"Password Successfully Changed",Toast.LENGTH_LONG).show();
-                        Intent ob=new Intent(ChangeActivity.this,LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        Toast.makeText(ChangeActivity.this, "Password Successfully Changed", Toast.LENGTH_LONG).show();
+                        Intent ob = new Intent(ChangeActivity.this, LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(ob);
 
                     } else {
@@ -141,7 +148,7 @@ public class ChangeActivity extends AppCompatActivity {
         };
 
         // Adding request to request queue
-        AppController1.getInstance().addToRequestQueue(strReq, tag_string_req);
+        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
 
     }
 
@@ -154,6 +161,4 @@ public class ChangeActivity extends AppCompatActivity {
         if (pDialog.isShowing())
             pDialog.dismiss();
     }
-
-
 }

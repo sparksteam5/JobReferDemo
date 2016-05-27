@@ -33,10 +33,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         public DataObjectHolder(View itemView) {
             super(itemView);
             txtTitle = (TextView) itemView.findViewById(R.id.title);
-//            txtCompany = (TextView) itemView.findViewById(R.id.company);
             txtDate= (TextView) itemView.findViewById(R.id.date);
-//            txtAddress = (TextView) itemView.findViewById(R.id.address);
-//            txtDescription = (TextView) itemView.findViewById(R.id.description);
             Log.i(LOG_TAG, "Adding Listener");
             itemView.setOnClickListener(this);
         }
@@ -51,6 +48,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
             ob.putExtra("date", mDataset.get(getAdapterPosition()).getDate());
             ob.putExtra("address", mDataset.get(getAdapterPosition()).getAddress());
             ob.putExtra("description", mDataset.get(getAdapterPosition()).getDescription());
+            ob.putExtra("salarytype", mDataset.get(getAdapterPosition()).getSalarytype());
 
             context.startActivity(ob);
 
@@ -82,9 +80,6 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     public void onBindViewHolder(DataObjectHolder holder, int position) {
         holder.txtTitle.setText(mDataset.get(position).getTitle());
         holder.txtDate.setText(mDataset.get(position).getDate());
-//        holder.txtCompany.setText(mDataset.get(position).getName());
-//        holder.txtAddress.setText(mDataset.get(position).getAddress());
-//        holder.txtDescription.setText(mDataset.get(position).getDescription());
     }
 
     public void addItem(Job dataObj, int index) {
@@ -111,10 +106,6 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         charText = charText.toLowerCase(Locale.getDefault());
         mDataset.clear();
 
-        Log.d("searchtext", charText);
-        Log.d("mdatalist", mDataset.size() + "");
-        Log.d("arraylist", arraylist.size() + "");
-
         if (charText.length() == 0) {
             mDataset.addAll(arraylist);
         } else {
@@ -125,7 +116,6 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
                     mDataset.add(wp);
                 }
             }
-            Log.d("Templedata", mDataset.size() + "");
         }
     }
 

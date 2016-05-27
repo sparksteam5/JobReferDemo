@@ -14,5 +14,21 @@
     {
         "merged": "D:\\Dhruval\\Android\\JobReferDemo\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_temple_list.xml",
         "source": "D:\\Dhruval\\Android\\JobReferDemo\\app\\src\\main\\res\\menu\\menu_temple_list.xml"
+    },
+    {
+        "merged": "D:\\Dhruval\\Android\\JobRefer\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "D:\\Dhruval\\Android\\JobRefer\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "D:\\Dhruval\\Android\\JobRefer\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
+        "source": "D:\\Dhruval\\Android\\JobRefer\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
+    },
+    {
+        "merged": "D:\\Dhruval\\Android\\JobRefer\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_temple_list.xml",
+        "source": "D:\\Dhruval\\Android\\JobRefer\\app\\src\\main\\res\\menu\\menu_temple_list.xml"
+    },
+    {
+        "merged": "D:\\Dhruval\\Android\\JobRefer\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_job_detail.xml",
+        "source": "D:\\Dhruval\\Android\\JobRefer\\app\\src\\main\\res\\menu\\menu_job_detail.xml"
     }
 ]

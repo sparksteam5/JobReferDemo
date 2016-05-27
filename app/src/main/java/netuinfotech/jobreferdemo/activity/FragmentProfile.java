@@ -31,7 +31,7 @@ import java.util.Map;
 
 import netuinfotech.jobreferdemo.R;
 import netuinfotech.jobreferdemo.app.AppConfig;
-import netuinfotech.jobreferdemo.app.AppController1;
+import netuinfotech.jobreferdemo.app.AppController;
 
 public class FragmentProfile extends Fragment {
 
@@ -288,7 +288,7 @@ public class FragmentProfile extends Fragment {
         };
 
         // Adding request to request queue
-        AppController1.getInstance().addToRequestQueue(strReq, tag_string_req);
+        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
 
     }
 
@@ -356,7 +356,7 @@ public class FragmentProfile extends Fragment {
         };
 
         // Adding request to request queue
-        AppController1.getInstance().addToRequestQueue(strReq, tag_string_req);
+        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
 
     }
 

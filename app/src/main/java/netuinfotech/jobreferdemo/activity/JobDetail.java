@@ -14,7 +14,8 @@ import netuinfotech.jobreferdemo.R;
 
 public class JobDetail extends AppCompatActivity {
 
-    TextView txtTitle, txtCompany, txtDate, txtAddress, txtDescription;
+    TextView txtTitle, txtCompany, txtDate, txtAddress, txtDescription, txtSalarytype;
+
     private ShareActionProvider mShareActionProvider;
     StringBuffer shareString=new StringBuffer();
 
@@ -33,6 +34,7 @@ public class JobDetail extends AppCompatActivity {
         txtDate= (TextView) findViewById(R.id.date);
         txtAddress= (TextView) findViewById(R.id.address);
         txtDescription= (TextView) findViewById(R.id.description);
+        txtSalarytype= (TextView) findViewById(R.id.salarytype);
 
         Intent ob=getIntent();
 
@@ -41,11 +43,13 @@ public class JobDetail extends AppCompatActivity {
         txtDate.setText(ob.getStringExtra("date"));
         txtAddress.setText(ob.getStringExtra("address"));
         txtDescription.setText(ob.getStringExtra("description"));
+        txtSalarytype.setText(ob.getStringExtra("salarytype"));
 
         shareString.append("Job Requirement").append("\n");
         shareString.append("Job Title : ").append(ob.getStringExtra("title")).append("\n");
         shareString.append("Company : ").append(ob.getStringExtra("company")).append("\n");
         shareString.append("Date : ").append(ob.getStringExtra("date")).append("\n");
+        shareString.append("Salary Type : ").append(ob.getStringExtra("salarytype")).append("\n");
         shareString.append("Description : ").append(ob.getStringExtra("description")).append("\n");
 
     }

@@ -23,7 +23,7 @@ import java.util.Map;
 
 import netuinfotech.jobreferdemo.R;
 import netuinfotech.jobreferdemo.app.AppConfig;
-import netuinfotech.jobreferdemo.app.AppController1;
+import netuinfotech.jobreferdemo.app.AppController;
 
 public class LoginActivity extends Activity {
 
@@ -45,7 +45,7 @@ public class LoginActivity extends Activity {
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnLinkToRegister = (Button) findViewById(R.id.btnLinkToRegisterScreen);
         btnLinkToAgreement = (Button) findViewById(R.id.btnLinkToAgreement);
-        btnForgot= (Button) findViewById(R.id.btnForgot);
+        btnForgot = (Button) findViewById(R.id.btnForgot);
 
         // Progress dialog
         pDialog = new ProgressDialog(this);
@@ -99,15 +99,13 @@ public class LoginActivity extends Activity {
         btnForgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent ob=new Intent(LoginActivity.this,ForgotActivity.class);
+                Intent ob = new Intent(LoginActivity.this, ForgotActivity.class);
                 startActivity(ob);
             }
         });
-
     }
 
-    private void checkLogin(final String email, final String password) {
+    public void checkLogin(final String email, final String password) {
         // Tag used to cancel the request
         String tag_string_req = "req_login";
 
@@ -170,9 +168,6 @@ public class LoginActivity extends Activity {
 
             @Override
             public void onErrorResponse(VolleyError error) {
-//                Log.e(TAG, "Login Error: " + error.getMessage());
-//                Toast.makeText(getApplicationContext(),
-//                        error.getMessage(), Toast.LENGTH_LONG).show();
                 Toast.makeText(LoginActivity.this,
                         "Username or password is wrong", Toast.LENGTH_LONG).show();
                 hideDialog();
@@ -191,7 +186,7 @@ public class LoginActivity extends Activity {
         };
 
         // Adding request to request queue
-        AppController1.getInstance().addToRequestQueue(strReq, tag_string_req);
+        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
     }
 
     private void showDialog() {

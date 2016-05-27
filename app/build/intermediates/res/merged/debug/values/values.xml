@@ -10,18 +10,6 @@
         <item>What is your childhood name?</item>
         <item>What is first school?</item>
     </string-array>
-    <string-array name="vacany_array">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-    </string-array>
     <string-array name="year_array">
         <item>2000</item>
         <item>2001</item>
@@ -294,6 +282,10 @@
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="font_littlesmall">12dp</dimen>
+    <dimen name="font_size">16dp</dimen>
+    <dimen name="font_size_title">25dp</dimen>
+    <dimen name="font_small">12dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
@@ -346,21 +338,55 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="aboutus_text">About Us</string>
     <string name="action_settings">Settings</string>
-    <string name="app_name">JobReferDemo</string>
+    <string name="agreement_text">Hi</string>
+    <string name="agreement_title">Privacy Policy</string>
+    <string name="app_name">Job Refer</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="btn_link_to_login">Already registred? Login Me.</string>
     <string name="btn_link_to_register">Not a member? Sign up now.</string>
     <string name="btn_login">LOGIN</string>
     <string name="btn_logout">LOGOUT</string>
     <string name="btn_register">REGISTER</string>
+    <string name="change_button_text">submit</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="drawer_aboutus">About us</string>
+    <string name="drawer_help">Help</string>
+    <string name="drawer_home">Home</string>
+    <string name="drawer_job">JOB</string>
+    <string name="drawer_profile">Profile</string>
+    <string name="drawer_title">Job Refer</string>
+    <string name="drawer_user">User</string>
+    <string name="forgot_button_text">submit</string>
+    <string name="help_text">Help</string>
+    <string name="hint_answer">Answer</string>
+    <string name="hint_confirmpassword">Confirm Password</string>
     <string name="hint_email">Email</string>
+    <string name="hint_job_address">Address</string>
+    <string name="hint_job_companyname">Company name</string>
+    <string name="hint_job_description">Description</string>
+    <string name="hint_job_label">JOB Requirement Info</string>
+    <string name="hint_job_salarytype">Salary Type</string>
+    <string name="hint_job_title">Title</string>
     <string name="hint_name">Fullname</string>
     <string name="hint_password">Password</string>
+    <string name="hint_profile_experience">Experience</string>
+    <string name="hint_profile_name">Name</string>
+    <string name="hint_profile_percentage">Percentage</string>
+    <string name="hint_profile_phone">Phone</string>
+    <string name="hint_profile_skills">Skills</string>
+    <string name="job_button_add">Add</string>
+    <string name="login_button_forgot">Forgot Password</string>
+    <string name="login_button_privacy">privacy policy</string>
+    <string name="login_label_title">Welcome To JobRefer</string>
     <string name="name">Fullname</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="profile_button_text">Submit</string>
+    <string name="profile_education_title">Education Info</string>
+    <string name="profile_experience_title">Experience Info</string>
+    <string name="profile_personal_title">Personal Info</string>
     <string name="search_hint">Serach Temple</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_agreement">AgreementActivity</string>

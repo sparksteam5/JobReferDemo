@@ -19,7 +19,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="2dp"
-            android:text="JOB Requirement Info"
+            android:text="@string/hint_job_label"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:typeface="serif" />
@@ -30,13 +30,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="@color/white"
-            android:hint="Title"
+            android:hint="@string/hint_job_title"
             android:inputType="text"
             android:padding="10dp"
             android:singleLine="true"
             android:textColor="@color/input_login"
             android:textColorHint="@color/input_login_hint"
-            android:textSize="12dp" />
+            android:textSize="@dimen/font_size" />
 
         <EditText
             android:id="@+id/txtName"
@@ -44,13 +44,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="@color/white"
-            android:hint="Company Name"
+            android:hint="@string/hint_job_companyname"
             android:inputType="text"
             android:padding="10dp"
             android:singleLine="true"
             android:textColor="@color/input_login"
             android:textColorHint="@color/input_login_hint"
-            android:textSize="12dp" />
+            android:textSize="@dimen/font_size" />
 
         <EditText
             android:id="@+id/txtSalaryType"
@@ -58,13 +58,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="@color/white"
-            android:hint="Salary Type"
+            android:hint="@string/hint_job_salarytype"
             android:inputType="text"
             android:padding="10dp"
             android:singleLine="true"
             android:textColor="@color/input_login"
             android:textColorHint="@color/input_login_hint"
-            android:textSize="12dp" />
+            android:textSize="@dimen/font_size" />
 
         <EditText
             android:id="@+id/txtAddress"
@@ -73,39 +73,13 @@
             android:layout_marginBottom="10dp"
             android:background="@color/white"
             android:gravity="top|left"
-            android:hint="Address"
+            android:hint="@string/hint_job_address"
             android:inputType="textMultiLine"
             android:padding="10dp"
             android:singleLine="true"
             android:textColor="@color/input_login"
             android:textColorHint="@color/input_login_hint"
-            android:textSize="12dp" />
-
-        <!--
-        <EditText
-            android:id="@+id/txtTech"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/white"
-            android:hint="Technolgy"
-            android:inputType="text"
-            android:padding="10dp"
-            android:singleLine="true"
-            android:textColor="@color/input_login"
-            android:textColorHint="@color/input_login_hint" />
-
-        <Spinner
-            android:id="@+id/spn_vacany"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_marginBottom="10dp"
-            android:background="@color/white"
-            android:singleLine="false"
-            android:textColor="@color/input_login"
-            android:textColorHint="@color/input_login_hint" />
-
-        -->
+            android:textSize="@dimen/font_small" />
 
         <EditText
             android:id="@+id/txtDescription"
@@ -114,13 +88,13 @@
             android:layout_marginBottom="10dp"
             android:background="@color/white"
             android:gravity="top|left"
-            android:hint="Description"
+            android:hint="@string/hint_job_description"
             android:inputType="textMultiLine"
             android:padding="10dp"
             android:scrollbars="vertical"
             android:textColor="@color/input_login"
             android:textColorHint="@color/input_login_hint"
-            android:textSize="12dp" />
+            android:textSize="@dimen/font_small" />
 
         <Button
             android:id="@+id/btnAdd"
@@ -128,8 +102,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dip"
             android:background="@color/btn_login_bg"
-            android:text="Add"
+            android:text="@string/job_button_add"
             android:textColor="@color/btn_login" />
 
     </LinearLayout>
+
 </ScrollView>

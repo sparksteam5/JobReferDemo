@@ -27,6 +27,7 @@
             android:hint="@string/hint_password"
             android:inputType="textPassword"
             android:padding="10dp"
+            android:textSize="@dimen/font_size"
             android:singleLine="true"
             android:textColor="@color/bg_login"
             android:textColorHint="@color/input_register_hint" />
@@ -37,9 +38,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="@color/white"
-            android:hint="Confirm Password"
+            android:hint="@string/hint_confirmpassword"
             android:inputType="textPassword"
             android:padding="10dp"
+            android:textSize="@dimen/font_size"
             android:singleLine="true"
             android:textColor="@color/bg_login"
             android:textColorHint="@color/input_register_hint" />
@@ -50,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
             android:background="@color/btn_login_bg"
-            android:text="Submit"
+            android:text="@string/change_button_text"
             android:textColor="@color/black" />
 
     </LinearLayout>

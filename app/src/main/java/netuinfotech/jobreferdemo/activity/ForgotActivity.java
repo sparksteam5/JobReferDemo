@@ -25,7 +25,7 @@ import java.util.Map;
 
 import netuinfotech.jobreferdemo.R;
 import netuinfotech.jobreferdemo.app.AppConfig;
-import netuinfotech.jobreferdemo.app.AppController1;
+import netuinfotech.jobreferdemo.app.AppController;
 
 public class ForgotActivity extends AppCompatActivity {
 
@@ -111,12 +111,13 @@ public class ForgotActivity extends AppCompatActivity {
                         int id = user.getInt("id");
                         String answer = user.getString("answer");
                         String email1 = user.getString("email");
+                        String question=user.getString("question");
 
-                        Log.d("email",email+" " + email1);
+                        Log.d("email",email+" " + email1+" " + question);
 
                         if (email.equalsIgnoreCase(email1)) {
 
-                            if (answer.equalsIgnoreCase(txtAnswer.getText().toString())) {
+                            if (answer.equalsIgnoreCase(txtAnswer.getText().toString()) && question.equalsIgnoreCase(spnQuestion.getSelectedItem().toString())) {
                                 Intent ob = new Intent(ForgotActivity.this, ChangeActivity.class);
                                 ob.putExtra("id",id+"");
                                 startActivity(ob);
@@ -163,7 +164,7 @@ public class ForgotActivity extends AppCompatActivity {
         };
 
         // Adding request to request queue
-        AppController1.getInstance().addToRequestQueue(strReq, tag_string_req);
+        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
     }
 
     private void showDialog() {
