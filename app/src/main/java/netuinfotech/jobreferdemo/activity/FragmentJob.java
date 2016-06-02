@@ -53,6 +53,8 @@ public class FragmentJob extends Fragment{
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        getActivity().setTitle("Add Job");
+
         txtTitle=(EditText)getView().findViewById(R.id.txtTitle);
         txtName=(EditText)getView().findViewById(R.id.txtName);
         txtAddress=(EditText)getView().findViewById(R.id.txtAddress);

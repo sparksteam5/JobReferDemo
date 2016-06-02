@@ -31,6 +31,12 @@
             android:icon="@drawable/help"
             android:title="@string/drawer_help" />
 
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/share"
+            android:title="@string/drawer_share" />
+
+
     </group>
 
 </menu>

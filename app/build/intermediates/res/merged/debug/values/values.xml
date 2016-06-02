@@ -356,9 +356,11 @@
     <string name="drawer_home">Home</string>
     <string name="drawer_job">JOB</string>
     <string name="drawer_profile">Profile</string>
+    <string name="drawer_share">Share</string>
     <string name="drawer_title">Job Refer</string>
     <string name="drawer_user">User</string>
     <string name="forgot_button_text">submit</string>
+    <string name="forgot_title">Forgot Password</string>
     <string name="help_text">Help</string>
     <string name="hint_answer">Answer</string>
     <string name="hint_confirmpassword">Confirm Password</string>

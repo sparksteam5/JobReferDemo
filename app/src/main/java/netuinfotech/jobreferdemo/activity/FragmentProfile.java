@@ -32,6 +32,7 @@ import java.util.Map;
 import netuinfotech.jobreferdemo.R;
 import netuinfotech.jobreferdemo.app.AppConfig;
 import netuinfotech.jobreferdemo.app.AppController;
+import netuinfotech.jobreferdemo.model.Controller;
 
 public class FragmentProfile extends Fragment {
 
@@ -53,6 +54,8 @@ public class FragmentProfile extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        getActivity().setTitle("Profile");
 
         spnQual = (Spinner) getView().findViewById(R.id.spn_qualification);
         spnYear = (Spinner) getView().findViewById(R.id.spn_year);
@@ -125,7 +128,54 @@ public class FragmentProfile extends Fragment {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setUpdateProfile();
+
+                String name=txtName.getText().toString();
+                String phone = txtPhone.getText().toString();
+                String per=txtPer.getText().toString();
+                String add=txtAdd.getText().toString();
+                String skill=txtSkill.getText().toString();
+                String company=txtComapny.getText().toString();
+                String exp=txtExp.getText().toString();
+
+                int bool = 0;
+
+                if(!Controller.isNullName(name)){
+                    txtName.setError("Value Required");
+                    bool=1;
+                }
+
+                if (!Controller.isValidMobile(phone)) {
+                    txtPhone.setError("Invalid number");
+                    bool = 1;
+                }
+
+                if(!Controller.isValidPercentage(per)){
+                    txtPer.setError("Invalid Percentage");
+                    bool=1;
+                }
+
+                if(!Controller.isValidAddress(add)){
+                    txtAdd.setError("Enter Full address");
+                    bool=1;
+                }
+
+                if(!Controller.isNullSkill(skill)){
+                    txtSkill.setError("Value Required");
+                    bool=1;
+                }
+
+                if(!Controller.isNullCompany(company)){
+                    txtComapny.setError("Value Required");
+                    bool=1;
+                }
+
+                if(!Controller.isNullExp(exp)){
+                    txtExp.setError("Value Required");
+                    bool=1;
+                }
+
+                if (bool == 0)
+                    setUpdateProfile();
             }
         });
 
@@ -296,7 +346,7 @@ public class FragmentProfile extends Fragment {
         // Tag used to cancel the request
         String tag_string_req = "req_profile";
 
-        pDialog.setMessage("Pleasse wait ...");
+        pDialog.setMessage("Please wait ...");
         showDialog();
 
         StringRequest strReq = new StringRequest(Request.Method.POST,

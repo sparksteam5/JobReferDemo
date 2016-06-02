@@ -27,5 +27,7 @@ public class FragmentHelp extends Fragment{
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        getActivity().setTitle("Help");
+
     }
 }

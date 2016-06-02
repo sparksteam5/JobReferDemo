@@ -3,6 +3,7 @@ package netuinfotech.jobreferdemo.activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -96,6 +97,15 @@ public class MainActivity extends AppCompatActivity
             fragment = new FragmentAboutus();
         } else if (id == R.id.nav_help) {
             fragment = new FragmentHelp();
+        } else if (id == R.id.nav_share) {
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent
+                    .putExtra(
+                            Intent.EXTRA_TEXT,
+                            "Download Now:market://details?id=exam.mcq.it.itmcq");
+            sendIntent.setType("text/plain");
+           startActivity(sendIntent);
         }
 
         if (fragment != null) {

@@ -66,6 +66,8 @@ public class FragmentUserList extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        getActivity().setTitle("User");
+
         mRecyclerView = (RecyclerView) getView().findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
 

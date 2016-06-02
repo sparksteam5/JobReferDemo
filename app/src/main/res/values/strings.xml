@@ -58,6 +58,8 @@
     <string name="help_text">Help</string>
 
     <string name="change_button_text">submit</string>
+
+    <string name="forgot_title">Forgot Password</string>
     <string name="forgot_button_text">submit</string>
 
     <string name="hint_password">Password</string>
@@ -82,6 +84,7 @@
     <string name="drawer_user">User</string>
     <string name="drawer_aboutus">About us</string>
     <string name="drawer_help">Help</string>
+    <string name="drawer_share">Share</string>
 
     <string name="profile_personal_title">Personal Info</string>
     <string name="hint_profile_name">Name</string>

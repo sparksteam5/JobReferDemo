@@ -27,5 +27,7 @@ public class FragmentAboutus extends Fragment{
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        getActivity().setTitle("About us");
+
     }
 }

@@ -36,6 +36,8 @@ public class ChangeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change);
 
+        setTitle(R.string.forgot_title);
+
         txtPassword = (EditText) findViewById(R.id.password);
         txtConfirmPassword = (EditText) findViewById(R.id.confirmPassword);
 

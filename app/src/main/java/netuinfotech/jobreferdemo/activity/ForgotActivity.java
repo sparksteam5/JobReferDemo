@@ -42,6 +42,8 @@ public class ForgotActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot);
 
+        setTitle(R.string.forgot_title);
+
         txtEmail = (EditText) findViewById(R.id.email);
         txtAnswer = (EditText) findViewById(R.id.txtAnswer);
         spnQuestion = (Spinner) findViewById(R.id.spn_question);
