@@ -36,6 +36,10 @@
             android:icon="@drawable/share"
             android:title="@string/drawer_share" />
 
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/icon"
+            android:title="@string/drawer_logout" />
 
     </group>
 

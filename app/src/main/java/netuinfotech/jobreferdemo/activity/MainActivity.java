@@ -106,6 +106,9 @@ public class MainActivity extends AppCompatActivity
                             "Download Now:market://details?id=exam.mcq.it.itmcq");
             sendIntent.setType("text/plain");
            startActivity(sendIntent);
+        } else if (id == R.id.nav_logout) {
+            Intent ob=new Intent(MainActivity.this,LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);;
+            startActivity(ob);
         }
 
         if (fragment != null) {
